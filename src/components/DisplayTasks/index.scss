@@ -1,0 +1,36 @@
+.displayTaskSection{
+    display:block;
+    justify-content: center;
+    align-content: space-around;
+    margin-right:0px !important;
+}
+.displayTasksList{  
+    list-style-type: none;
+    
+   
+   
+    li{
+        width:auto;
+        height:auto;
+        margin-bottom:10px;
+        padding:20px;
+        border-radius: 10px;
+    }
+}
+// .doneItemsUl{
+//     float:right;
+// }
+// .undoneItemsUl{
+//     float:left;
+// }
+
+.doneItems{
+        
+        background-color:rgb(156, 224, 156);
+   
+    }
+.undoneItems{
+       
+        background-color:rgb(250, 156, 133);
+        
+    }

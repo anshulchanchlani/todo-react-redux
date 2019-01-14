@@ -1,0 +1,27 @@
+.new-task-form{
+    display:flex;
+    justify-content: center;
+    align-content: space-around;
+   
+}
+
+.new-task-form>button{
+    width:100px;
+    height:25px;
+    margin-left:5px;
+}
+
+.new-task-form>input{
+    width:60%;
+    height:20px;
+    margin-left:60px;
+    text-align: center;
+}
+
+.error-msg{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-content: space-around;
+    color:red;
+}

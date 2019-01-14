@@ -1,0 +1,76 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description": "A Todo app using ReactJS and Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start:dev": "webpack-dev-server --mode development --config webpack.dev.js --open",
+    "start:prod": "npm run build && node ./src/server.js",
+    "build": "webpack --config webpack.prod.js --mode production"
+  },
+  "keywords": [
+    "carousel"
+  ],
+  "author": "Anshul Chanchlani <anshulchanchlani@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.4",
+    "express": "^4.16.4",
+    "identity-obj-proxy": "^3.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-grid-system": "^4.4.1",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "regenerator-runtime": "^0.13.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/setup/"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/public/**",
+      "!**/tests/**",
+      "!**/*.spec.js",
+      "!**/styles/**"
+    ],
+    "coverageReporters": [
+      "text-summary"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
