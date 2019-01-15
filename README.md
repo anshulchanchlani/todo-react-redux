@@ -59,4 +59,10 @@ A Todo App using React and Redux
 * Filter for different tasks
 * Dashboard for overall tasks and stats.
 * React Router
+* ES Lint
 
+### Design Patterns Used
+* Flux - A single object for the whole front-end store - Redux. This enables various components of the
+  application on the client side to update dynamically and without making extra requests to the server.
+  Flux pattern comprises of Actions, Reducers, Dispatcher and Store and an implementation of that (Redux library)
+  has been used in this project.
