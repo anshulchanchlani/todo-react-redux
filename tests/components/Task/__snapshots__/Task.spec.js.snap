@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task tests Task renders 1`] = `
+<Fragment>
+  <li>
+    <input
+      aria-label="hi"
+      checked={true}
+      name="checkbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="hi"
+    />
+    <span>
+      hi
+    </span>
+    <span
+      aria-label="Close Task"
+      className="close-task"
+      onClick={[Function]}
+    >
+      ×
+    </span>
+    <label
+      className="modified-date"
+      name="modified date"
+    >
+       at - 
+      15-01-2019 18:27
+    </label>
+  </li>
+</Fragment>
+`;

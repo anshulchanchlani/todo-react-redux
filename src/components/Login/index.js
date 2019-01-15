@@ -29,26 +29,26 @@ class Login extends Component {
 
         return (
             <Container className="loginContainer">
-                <form onSubmit={this.handleLogin}>
+                <form name="Login Form" onSubmit={this.handleLogin}>
                 <Row>
                     <Col xs={12} md={8} lg={8} sm={12}>
-                        <input type="text" name="username" placeholder="Enter your username" onChange={this.handleOnChange} />
+                        <input aria-label="username" type="text" name="username" placeholder="Enter your username" onChange={this.handleOnChange} />
                     </Col>
                 </Row>
                 <Row>
 
                     <Col xs={12} md={8} lg={8} sm={12}>
-                        <input type="password" name="password" placeholder="Enter your password" onChange={this.handleOnChange} />
+                        <input aria-label="password" type="password" name="password" placeholder="Enter your password" onChange={this.handleOnChange} />
                     </Col>
                 </Row>
                 <Row>
                     <Col xs={12} md={8} lg={8} sm={12}>
-                        <button  onClick={this.handleLogin}>Login</button>
+                        <button name="Login" aria-label="Login" onClick={this.handleLogin}>Login</button>
                     </Col>
                 </Row>
                 {this.state.error?<Row>
                     <Col xs={12} md={8} lg={8} sm={12}>
-                        <span className="error-msg">Please check your credentials.</span>
+                        <span aria-label="Check credentials" className="error-msg">Please check your credentials.</span>
                     </Col>
                     
                 </Row>:null}

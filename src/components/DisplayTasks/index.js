@@ -25,15 +25,15 @@ class DisplayTasks extends Component {
             (undoneItems.length > 0 || doneItems.length > 0) && 
             <Container className="displayTaskSection">
                 <Row>
-                    <Col xs={12} lg={5} md={5} sm={10}>
-                        <ul className="displayTasksList undoneItemsUl">
+                    <Col xs={12} lg={5} md={5} sm={12}>
+                        <ul aria-label="Undone Items" className="displayTasksList undoneItemsUl">
 
                             {undoneItems}
                         </ul>
                     </Col>
                  
-                    <Col xs={12} lg={5} md={5} sm={10}>
-                        <ul className="displayTasksList doneItemsUl">
+                    <Col xs={12} lg={5} md={5} sm={12}>
+                        <ul aria-label="Done Items" className="displayTasksList doneItemsUl">
 
                             {doneItems}
                         </ul>

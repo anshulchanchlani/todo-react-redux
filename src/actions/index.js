@@ -24,7 +24,6 @@ export const deleteTask = (itemId) => {
 
 export const fetchTasks= async(username,password)=>{
     const result = await axios.get('/getTasks',{params:{username:username,password:password}})
-    console.log(result)
     return{
         type:FETCH_TASK,
         payload:result.data.tasks
@@ -32,9 +31,8 @@ export const fetchTasks= async(username,password)=>{
 }
 
 export const writeTasksToFile = async(username,password,tasks)=>{
-    console.log('getting us,pa,ta as',username,password,tasks )
     const result = await axios.post('/writeTasks',{username:username,password:password,tasks:tasks})
-    console.log(result)
+
     return{
         type:WRITE_TASK,
         payload:tasks

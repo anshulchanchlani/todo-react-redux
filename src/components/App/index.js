@@ -9,7 +9,8 @@ import Header from '../Header'
 import Login from '../Login'
 
 import './index.scss'
-
+import { setInterval, clearInterval } from 'timers';
+let intervalVar=null;
 class App extends Component {
     constructor(props){
         super(props);
@@ -21,24 +22,27 @@ class App extends Component {
         }
         this.login = this.login.bind(this)
         this.logout = this.logout.bind(this)
-       
+        this.saveContentsToDisk= this.saveContentsToDisk.bind(this)
     }
 
     login(username,password){
         
         this.setState({username:username,password:password})
         this.props.fetchTasks(username,password)
-        console.log('before checking login in status',this.props.tasks)
+        
         if(this.props.tasks && this.props.tasks.length>=0){
             this.setState({isLoggedIn:true})
         }
     }
-   
+    saveContentsToDisk(){
+        this.props.writeTasksToFile(this.state.username,this.state.password,this.props.tasks)
+    }
     logout(){
-         saveToDisk();
+        this.saveContentsToDisk();
         this.setState({isLoggedIn:false})
         
     }
+   
     render() {
        let tasks = this.props.tasks;
         return (

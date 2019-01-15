@@ -1,4 +1,5 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path')
 module.exports = {
     entry: ['./src/index.js'],
@@ -32,6 +33,7 @@ module.exports = {
             // include all types of chunks
             chunks: 'all',
             name:'vendors'
-        }
+        },
+        minimizer:[new UglifyJsPlugin()]
     }
 };

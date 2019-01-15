@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login tests Login renders 1`] = `
+<Container
+  className="loginContainer"
+  component="div"
+  fluid={false}
+  lg={false}
+  md={false}
+  sm={false}
+  style={Object {}}
+  xl={false}
+  xs={false}
+>
+  <form
+    name="Login Form"
+    onSubmit={[Function]}
+  >
+    <Row
+      align="normal"
+      component="div"
+      debug={false}
+      justify="start"
+      nogutter={false}
+      style={Object {}}
+    >
+      <Col
+        component="div"
+        debug={false}
+        lg={8}
+        md={8}
+        offset={Object {}}
+        pull={Object {}}
+        push={Object {}}
+        sm={12}
+        style={Object {}}
+        xl={null}
+        xs={12}
+      >
+        <input
+          aria-label="username"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter your username"
+          type="text"
+        />
+      </Col>
+    </Row>
+    <Row
+      align="normal"
+      component="div"
+      debug={false}
+      justify="start"
+      nogutter={false}
+      style={Object {}}
+    >
+      <Col
+        component="div"
+        debug={false}
+        lg={8}
+        md={8}
+        offset={Object {}}
+        pull={Object {}}
+        push={Object {}}
+        sm={12}
+        style={Object {}}
+        xl={null}
+        xs={12}
+      >
+        <input
+          aria-label="password"
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter your password"
+          type="password"
+        />
+      </Col>
+    </Row>
+    <Row
+      align="normal"
+      component="div"
+      debug={false}
+      justify="start"
+      nogutter={false}
+      style={Object {}}
+    >
+      <Col
+        component="div"
+        debug={false}
+        lg={8}
+        md={8}
+        offset={Object {}}
+        pull={Object {}}
+        push={Object {}}
+        sm={12}
+        style={Object {}}
+        xl={null}
+        xs={12}
+      >
+        <button
+          aria-label="Login"
+          name="Login"
+          onClick={[Function]}
+        >
+          Login
+        </button>
+      </Col>
+    </Row>
+  </form>
+</Container>
+`;

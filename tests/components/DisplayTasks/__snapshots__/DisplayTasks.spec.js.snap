@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App tests App renders 1`] = `
+exports[`Display Tasks tests Display Tasks renders 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

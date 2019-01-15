@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header tests Header renders 1`] = `
+<header
+  className="app-header"
+>
+  <h1>
+    Todo's
+  </h1>
+</header>
+`;
