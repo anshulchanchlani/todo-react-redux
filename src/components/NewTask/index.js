@@ -18,14 +18,14 @@ class NewTask extends Component {
         if (this.state.taskName !== '') {
             let newTask = {
                 id: this.props.tasks.length + 1,
-                name: this.state.taskName,
+                name: this.state.taskName.trim(),
                 createdAt: Date.now(),
                 completed: false,
                 lastModifiedAt: Date.now()
             }
 
             this.props.addTask(Object.assign({}, newTask));
-           
+            this.props.saveToDisk();
             this.setState({ taskName: '' })
         }else{
             this.setState({error:true})

@@ -52,7 +52,7 @@ class App extends Component {
                 {this.state.invalidCreds?<span className="error-msg">Please enter valid credentials.</span>:null}
                 {this.state.isLoggedIn?<button onClick={this.logout} className="logout-btn">Logout</button>:null}
                 {this.state.isLoggedIn?<Fragment><div>
-                    <NewTask  tasks={tasks}/>
+                    <NewTask saveToDisk={this.saveContentsToDisk} tasks={tasks}/>
                 </div>
                 <div>
                     <DisplayTasks  tasks={tasks} />
