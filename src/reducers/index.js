@@ -32,12 +32,17 @@ const taskReducer = (state = [], action) => {
             break;
 
         case FETCH_TASK:
-            state = action.payload;
+            if(action.payload && action.payload.data && action.payload.data.tasks)
+            {state= action.payload.data.tasks}else{
+                state=[]
+            }
 
             break;
         
         case WRITE_TASK:
             return state;
+            break;
+        default: return state;
     }
     return state;
 }

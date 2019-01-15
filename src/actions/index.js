@@ -26,7 +26,7 @@ export const fetchTasks= async(username,password)=>{
     const result = await axios.get('/getTasks',{params:{username:username,password:password}})
     return{
         type:FETCH_TASK,
-        payload:result.data.tasks
+        payload:result
     }
 }
 

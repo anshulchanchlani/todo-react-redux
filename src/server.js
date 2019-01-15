@@ -42,8 +42,7 @@ app.get('/getTasks', isAuthenticated, (req, res) => {
       res.json(jsonObj[username])
 
     } else {
-      res.status(404);
-      res.send('No tasks found');
+      res.json({});
 
     }
   })
