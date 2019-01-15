@@ -40,6 +40,7 @@ A Todo App using React and Redux
 * Different webpack profiles for Production and Dev
 * GZip Compression used in Express Server
 * Hot Module Replacement for dev server
+* Responsive UI
 
 
 ### Libraries Used
