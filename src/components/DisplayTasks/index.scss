@@ -1,8 +1,7 @@
 .displayTaskSection{
-    display:block;
-    justify-content: center;
-    align-content: space-around;
-    margin-right:0px !important;
+  
+
+   margin:auto;
 }
 .displayTasksList{  
     list-style-type: none;
@@ -17,12 +16,6 @@
         border-radius: 10px;
     }
 }
-// .doneItemsUl{
-//     float:right;
-// }
-// .undoneItemsUl{
-//     float:left;
-// }
 
 .doneItems{
         

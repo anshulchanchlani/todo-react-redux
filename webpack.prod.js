@@ -23,26 +23,10 @@ module.exports = {
                 "css-loader",
                 "sass-loader"
             ]
-        },
-        {
-            test: /\.(jpeg|png|jpg|gif|svg)$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    name: `images/[name].[ext]`,
-
-                }
-            }]
         }
-
         ]
     },
-    plugins: [
-        new CopyWebpackPlugin([{
-            from: `./src/images/`,
-            to: `./images/`
-        }])
-    ],
+     
     optimization:{
         splitChunks: {
             // include all types of chunks

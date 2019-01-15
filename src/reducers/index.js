@@ -1,48 +1,55 @@
-import {combineReducers} from 'redux';
-import { ADD_TASK, TOGGLE_TASK,DELETE_TASK } from '../constants/index';
+import { combineReducers } from 'redux';
+import { ADD_TASK, TOGGLE_TASK, DELETE_TASK, FETCH_TASK ,WRITE_TASK} from '../constants/index';
 
 
-const taskReducer = (state=[],action) =>{
+const taskReducer = (state = [], action) => {
 
-    switch(action.type){
+    switch (action.type) {
         case ADD_TASK:
-      
-            state = state.concat(action.payload) 
-            break;
-    
-           
-        case TOGGLE_TASK:
-            let initialArrayForToggle =state
 
-            state = initialArrayForToggle.map((task)=>{
-                if(task.id===action.payload){
-                    task.completed=!task.completed
+            state = state.concat(action.payload)
+            break;
+
+
+        case TOGGLE_TASK:
+            let initialArrayForToggle = state
+
+            state = initialArrayForToggle.map((task) => {
+                if (task.id === action.payload) {
+                    task.completed = !task.completed
                 }
                 return task;
             })
-            
+
+            break;
+
+        case DELETE_TASK:
+            let initialArrayForDeletion = state;
+
+            state = arrayRemove(initialArrayForDeletion, action.payload)
+
+
+            break;
+
+        case FETCH_TASK:
+            state = action.payload;
+
             break;
         
-        case DELETE_TASK:
-        let initialArrayForDeletion = state;
-        
-        state = arrayRemove(initialArrayForDeletion,action.payload)
-        
-        
-        break;
-
-         
+        case WRITE_TASK:
+            return state;
     }
     return state;
 }
+
 const reducers = combineReducers({
-    tasks:taskReducer
+    tasks: taskReducer,
 })
 export default reducers;
 
 function arrayRemove(arr, value) {
 
-    return arr.filter(function(ele){
+    return arr.filter(function (ele) {
         return ele.id != value;
     });
 }

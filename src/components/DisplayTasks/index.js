@@ -10,7 +10,7 @@ class DisplayTasks extends Component {
     render() {
         let doneItems = [], undoneItems = [];
         let self = this;
-        console.log(this.props.tasks)
+
         this.props.tasks && this.props.tasks.length > 0 && this.props.tasks.forEach(function (item) {
 
             if (item.completed) {
@@ -46,9 +46,5 @@ class DisplayTasks extends Component {
 function mapDispatchToProps(dispatch){
     return bindActionCreators({toggleTask,deleteTask},dispatch)
 }
-function mapStateToProps(state){
-    return {
-                    tasks: state.tasks
-    }
-}
-export default connect(mapDispatchToProps,mapDispatchToProps)(DisplayTasks)
+
+export default connect(null,mapDispatchToProps)(DisplayTasks)

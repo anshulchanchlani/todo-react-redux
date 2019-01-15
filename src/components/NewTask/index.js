@@ -25,6 +25,7 @@ class NewTask extends Component {
             }
 
             this.props.addTask(Object.assign({}, newTask));
+           
             this.setState({ taskName: '' })
         }else{
             this.setState({error:true})
