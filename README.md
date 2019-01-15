@@ -53,6 +53,7 @@ A Todo App using React and Redux
 
 ### Things I would have done if I had more time
 * More tests
+* Refactoring 
 * JWT for session management
 * Filter for different tasks
 * Dashboard for overall tasks and stats.
